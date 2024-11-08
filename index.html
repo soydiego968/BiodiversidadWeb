@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página web</title>
+    <link rel="stylesheet" href="Clases CSS/styles.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#">ACUICULTURA</a></li>
+            <li><a href="#">TURISMO</a></li>
+            <li><a href="#">BOTANICA</a></li>
+            <li><a href="#">PASEOS</a></li>
+        </ul>
+    </nav>
+
+    <div class="video container">
+        <video width="640" height="360" controls autoplay muted>
+            <source src="video/video institucional.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+
+    <h1>Parque de la Biodiversidad</h1>
+
+    <p><b>¡Bienvenido al fascinante mundo del Parque de la Biodiversidad! Sumérgete en la belleza acuática de nuestro
+        acuario, donde podrás maravillarte con una variedad de criaturas marinas. Descubre la diversidad de especies
+        nativas en nuestro vivero, donde promovemos la conservación y el conocimiento de nuestra flora y fauna local.
+        Embárcate en un paseo único a través del Paseo del Carau, donde la naturaleza te envuelve en cada paso. En el
+        Parque de la Biodiversidad, te invitamos a explorar y conectar con la riqueza de nuestros distintos sectores, cada uno
+        ofreciendo una experiencia única e inolvidable para todos los visitantes.</b></p>
+
+    
+    <p class="ubicacion-gps">📍 Como llegar al Parque de la Biodiversidad: 
+        <a href="https://www.google.com/maps?q=loc:-34.6037,-58.3816" target="_blank" class="ubicacion-link">
+            <i class="fas fa-map-marker-alt"></i> Ver en Google Maps
+        </a>
+    </p>
+
+    
+    <div id="imagen-contenedor" class="image-container">
+        <img src="img/imagen acuario 1.jpg" alt="imagendeacuario1">
+        <img src="img/imagen acuario 2.webp" alt="imagendeacuario2">
+        <img src="img/imagen acuario 3.webp" alt="imagendeacuario3">
+        <img src="img/imagen pejerrey1.jpg" alt="imagendpejerrey1">
+        <img src="img/imagen pejerrey2.webp" alt="imagenpejerrey2">
+        <img src="img/imagen pejerrey3.jpg" alt="imagenpejerrey3">
+        <img src="img/imagen de miñions.jpg" alt="imagenminions">
+        <img src="img/imagen del carau.jpg" alt="imagencarau">
+        <img src="img/imagen laguna.jpg" alt="imagenlaguna">
+        <img src="img/cactario.jpg" alt="imagencactario">
+        <img src="img/canales.jpg" alt="imagencanales">
+        <img src="img/ingreso.jpg" alt="imageningreso">
+    </div>
+
+    <form action="procesar_formulario.php" method="post" class="formulario">
+        <h3>AGENDA TU VISITA</h3>
+
+        <div class="formulario_input">
+            <label for="Nombre">Nombre Completo</label>
+            <input type="text" id="Nombre" name="Nombre" placeholder="Nombre Completo" required>
+            <span id="nombreError" class="error"></span> 
+        </div>
+
+        <div class="formulario_input">
+            <label for="Colegio">Nombre del colegio</label>
+            <input type="text" id="Colegio" name="Colegio" placeholder="Nombre del Colegio" required>
+        </div>
+
+        <div class="formulario_input">
+            <label for="Fecha">Seleccione una Fecha</label>
+            <input type="date" id="Fecha" name="Fecha" required>
+        </div>
+
+        <div class="formulario_input">
+            <label for="Hora">Indique una Hora</label>
+            <input type="time" id="Hora" name="Hora" required>
+        </div>
+
+        <div class="formulario_input">
+            <label for="Alumnos">Cantidad de alumnos</label>
+            <input type="number" id="Alumnos" name="Alumnos" placeholder="Cantidad de Alumnos" required>
+        </div>
+
+        <div class="formulario_input">
+            <label for="Correo">Dejanos tu correo</label>
+            <input type="email" id="Correo" name="Correo" placeholder="correo@example.com" required>
+        </div>
+
+        <div class="formulario_input">
+            <label for="TipoVisita">Tipos de visitantes</label>
+            <select name="TipoVisita" id="TipoVisita">
+                <option value="Colegios">Colegios</option>
+                <option value="Empresa">Empresa</option>
+                <option value="Particular">Particular</option>
+            </select>
+        </div>
+
+        <div class="formulario_input">
+            <label for="Mensaje">Mensaje</label>
+            <textarea id="Mensaje" name="Mensaje" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+        </div>
+        
+        <div class="formulario_input">
+            <label>
+                <input type="checkbox" id="TerminosCondiciones" name="TerminosCondiciones" required>
+                Acepto los <a href="terms.html" target="_blank">términos y condiciones</a>
+            </label>
+        </div>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <p>📞 Teléfono: <a href="tel:2644302514">+2644302514</a></p>
+            <p>✉️ Correo: <a href="mailto:pinarparque@gmail.com">pinarparque@gmail.com</a></p>
+            <a href="https://www.facebook.com/ParqueDeLaBiodiversidad" target="_blank" class="facebook-link">
+                <i class="fab fa-facebook-f"></i> Síguenos en Facebook</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 ParquedelaBiodiversidad. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
